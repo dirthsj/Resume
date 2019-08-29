@@ -21,7 +21,7 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
-
+\usepackage{qrcode}
 %----------------------------------------------------------------------------------------
 
 \begin{document}
@@ -33,9 +33,7 @@
 \begin{minipage}[t]{0.5\textwidth} % 45% of the page width for name
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
 
-	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Steven Dirth}}}}} % First name
-	
-%	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Dirth}}}}} % Last name
+	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Steven Dirth}}}}}
 	
 	\vspace{6pt}
 	
@@ -51,7 +49,7 @@
 		\faLinkedin
 	}
 \end{minipage}
-\begin{minipage}[t]{0.47\textwidth} % 58% of the page width for the first row of icons
+\begin{minipage}[t]{0.27\textwidth} % 58% of the page width for the first row of icons
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
 	{\large
 		\href{tel:15636072806}{+1 563 607 2806} \\
@@ -61,6 +59,17 @@
 		\href{https://linkedin.com/in/stevendirth}{linkedin.com/in/stevendirth}
 	}
 \end{minipage}
+\begin{minipage}[t]{0.20\textwidth} % 20% of the page for the qr code
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+	\hfill \qrcode{https://stevendirth.com}
+
+\end{minipage}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+
 
 \vspace{0.5cm}
 
@@ -157,7 +166,7 @@
 \end{entrylist}
 
 %----------------------------------------------------------------------------------------
-%	ADDITIONAL INFORMATION
+%	ACTIVITIES AND HONORS
 %----------------------------------------------------------------------------------------
 
 \begin{minipage}[t]{0.17\textwidth}
