@@ -22,6 +22,8 @@
 
 \documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
 \usepackage{qrcode}
+\usepackage{paralist}
+
 %----------------------------------------------------------------------------------------
 
 \begin{document}
@@ -94,11 +96,6 @@
 	\end{barchart}
 \end{minipage}
 
-
-%\begin{center}
-%	\bubbles{5/Eclipse, 6/git, 4/Office, 3/Inkscape, 3/Blender}
-%\end{center}
-
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
@@ -108,9 +105,9 @@
 \begin{entrylist}
 	\entry
 		{2017 -- 2021}
-		{Bachelor's Degree}
+		{Bachelor's Degree in Software Engineering}
 		{Iowa State University}
-		{Dean's List Fall 2017 | Spring 2018}
+		{Dean's List Fall 2017 | Spring 2018 \\ 3.0 GPA}
 \end{entrylist}
 
 %----------------------------------------------------------------------------------------
@@ -124,17 +121,25 @@
 		{May -- Aug 2019}
 		{Software Developer Intern -- Data Science \& Informatics}
 		{Corteva Agriscience}
-		{I redesigned a solution for moving and managing data between systems using .NET, .NET Core, Entity Framework Core, Azure, and Angular. The backend for the project was done using Azure Functions serving as both the web API and data processor. The frontend was written in Angular 5 utilizing Typescript and SCSS. I also created a windows service to load data into the backend. I used Azure DevOps, Artifactory, and Octopus Deploy for deployment.}
+		{\begin{compactitem}
+			\item .NET, .NET Core, EntityFramework Core
+			\item Azure (Azure SignalR, Azure Functions, Azure Storage)
+			\item Angular
+			\item Azure DevOps (build / deploy / version control)
+		\end{compactitem}}
 	\entry
 		{May -- Aug 2018}
 		{Test Department Intern}
 		{Sears Seating}
-		{I performed various tests (both automated and manual) on a number of seats.  This included designing the test, setup, data recording, and teardown.  The major project I worked on was a semi-automated test involving an environment chamber, a NI cRIO, several sensors and multiple actuators}
+		{\begin{compactitem}
+			\item Worked with Excel VBA and Qt's ActiveX framework
+			\item NI cRIO for partial test automation and logging
+		\end{compactitem}}
 	\entry
-		{2018 and prior}
-		{Various Employment}
-		{Iowa State University, Monsanto Company}
-		{I worked for ISU Dining during the 2nd semester of the 2017-2018 school year.  I also worked for Monsanto the two summers before that.}
+		{2016 -- 2017}
+		{Summer Intern}
+		{Monsanto Company}
+		{I worked for Monsanto during the summer of 2016 and 2017.  This included leading groups of employees in field work and collecting data.}
 \end{entrylist}
 
 %----------------------------------------------------------------------------------------
@@ -157,7 +162,7 @@
 		{2018 -- 2019}
 		{Marineris}
 		{Cardinal Space Mining}
-		{The main robot control software which runs on a Xilinx MicroZed.  The software is written in C++ using the boost libraries and is cross compiled for the MicroZed.  A major improvement this year was to the motor communication, as we were able to get sensor feedback from the motor controllers.}\
+		{The main robot control software which runs on a Xilinx MicroZed.  A major improvement this year was to the motor communication, as we were able to get sensor feedback from the motor controllers.}\
 	\entry
 		{2017}
 		{Development Server}
@@ -169,17 +174,17 @@
 %	ACTIVITIES AND HONORS
 %----------------------------------------------------------------------------------------
 
-\begin{minipage}[t]{0.17\textwidth}
+\begin{minipage}[t]{0.16\textwidth}
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
 
 	\cvsect{Activities}
 	
 	2019 -- \\
 	2017 -- \\
-	2016 -- 17 \\
-	2016 -- 17 \\
-	2016 -- 17 \\
-	2014 -- 17 \\
+	2016 -- 2017 \\
+	2016 -- 2017 \\
+	2016 -- 2017 \\
+	2014 -- 2017 \\
 
 \end{minipage}
 \hfill
@@ -196,7 +201,7 @@
 	\textbf{Developer}\hfill FIRST Tech Challenge \\
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.3\textwidth}
+\begin{minipage}[t]{0.32\textwidth}
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
 
 	\cvsect{Honors}
