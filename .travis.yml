@@ -1,13 +1,9 @@
-# source: https://tex.stackexchange.com/questions/398830/how-to-build-my-latex-automatically-using-travis-ci
 sudo: required
 language: generic
 services: docker
 
 script:
-  # We use the docker image from https://hub.docker.com/r/dxjoke/tectonic-docker/
-  - docker pull dxjoke/tectonic-docker
-  # Fix for fontawesome
-  # https://github.com/tectonic-typesetting/tectonic/issues/157
-  - docker run dxjoke/tectonic-docker /bin/sh -c "apt-get update && apt-get install -y fonts-font-awesome=4.7.0~dfsg-1 fontconfig && fc-cache"
+  # We use the docker image from https://hub.docker.com/r/stevend32908324820/latexarchlinux
+  - docker pull stevend32908324820/latexarchlinux
   # Compiling only main.tex:
-  - docker run --mount src=$TRAVIS_BUILD_DIR,target=/usr/src/tex,type=bind dxjoke/tectonic-docker /bin/sh -c "tectonic main.tex"
+  - docker run --mount src=$TRAVIS_BUILD_DIR,target=/usr/src/tex,type=bind stevend32908324820/latexarchlinux /bin/sh -c "tectonic main.tex"
