@@ -8,6 +8,6 @@ script:
   - docker pull dxjoke/tectonic-docker
   # Fix for fontawesome
   # https://github.com/tectonic-typesetting/tectonic/issues/157
-  - docker run dxjoke/tectonic-docker /bin/sh -c "apt-get update && apt-get install -y fonts-font-awesome=4.7.0~dfsg-1"
+  - docker run dxjoke/tectonic-docker /bin/sh -c "apt-get update && apt-get install -y fonts-font-awesome=4.7.0~dfsg-1 && fc-cache"
   # Compiling only main.tex:
   - docker run --mount src=$TRAVIS_BUILD_DIR,target=/usr/src/tex,type=bind dxjoke/tectonic-docker /bin/sh -c "tectonic main.tex"
