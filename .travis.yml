@@ -5,5 +5,7 @@ services: docker
 script:
   # We use the docker image from https://hub.docker.com/r/stevend32908324820/latexarchlinux
   - docker pull stevend32908324820/latexarchlinux
+  # allow everyone to use build dir
+  - sudo chmod 700 $TRAVIC_BUILD_DIR
   # Compiling only main.tex:
   - docker run --mount src=$TRAVIS_BUILD_DIR,target=/usr/src/tex,type=bind stevend32908324820/latexarchlinux /bin/sh -c "tectonic main.tex"
