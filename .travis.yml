@@ -15,4 +15,5 @@ deploy:
   token: $GITHUB_TOKEN
   file: main.pdf
   on:
-    tags: true
+    tags: false
+    branch: master
