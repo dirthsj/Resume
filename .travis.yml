@@ -9,6 +9,13 @@ script:
   - sudo chmod 777 $TRAVIS_BUILD_DIR
   # Compiling only main.tex:
   - docker run --mount src=$TRAVIS_BUILD_DIR,target=/usr/src/tex,type=bind stevend32908324820/latexarchlinux /bin/sh -c "tectonic main.tex"
+  
+before_deploy:
+# Set up git user name and tag this commit
+- git config --local user.name "Steven Dirth"
+- git config --local user.email "git@stevendirth.com"
+- export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+- git tag $TRAVIS_TAG
 
 deploy:
   provider: releases
